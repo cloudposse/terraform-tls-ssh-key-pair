@@ -1,4 +1,4 @@
-# terraform-aws-key-pair [![Build Status](https://travis-ci.org/cloudposse/terraform-aws-key-pair.svg?branch=master)](https://travis-ci.org/cloudposse/terraform-aws-key-pair)
+# terraform-tls-ssh-key-pair
 
 Terraform module for generating an SSH public key file.
 
@@ -6,7 +6,7 @@ Terraform module for generating an SSH public key file.
 
 ```hcl
 module "ssh_key_pair" {
-  source                = "git::https://github.com/cloudposse/terraform-aws-key-pair.git?ref=master"
+  source                = "git::https://github.com/cloudposse/terraform-tls-ssh-key-pair.git?ref=master"
   namespace             = "cp"
   stage                 = "prod"
   name                  = "app"
