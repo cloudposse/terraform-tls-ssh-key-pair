@@ -1,6 +1,7 @@
-# terraform-tls-ssh-key-pair
+# terraform-tls-ssh-key-pair [![Build Status](https://travis-ci.org/cloudposse/terraform-tls-ssh-key-pair.svg?branch=master)](https://travis-ci.org/cloudposse/terraform-tls-ssh-key-pair)
 
 Terraform module for generating an SSH public key file.
+
 
 ## Usage
 
@@ -30,6 +31,7 @@ module "ssh_key_pair" {
 | `public_key_extension`       | `.pub`         | Public key file extension (_e.g._ `.pub`)                | No        |
 | `chmod_command`              | `chmod 600 %v` | Template of the command executed on the private key file | Yes(Linux), No(Windows) |
 
+
 ## Outputs
 
 | Name                  | Description                                   |
@@ -42,18 +44,18 @@ module "ssh_key_pair" {
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/cloudposse/terraform-aws-key-pair/issues), send us an [email](mailto:hello@cloudposse.com) or reach out to us on [Gitter](https://gitter.im/cloudposse/).
+File a GitHub [issue](https://github.com/cloudposse/terraform-tls-ssh-key-pair/issues), send us an [email](mailto:hello@cloudposse.com) or reach out to us on [Gitter](https://gitter.im/cloudposse/).
 
 
 ## Contributing
 
 ### Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/cloudposse/terraform-aws-key-pair/issues) to report any bugs or file feature requests.
+Please use the [issue tracker](https://github.com/cloudposse/terraform-tls-ssh-key-pair/issues) to report any bugs or file feature requests.
 
 ### Developing
 
-If you are interested in being a contributor and want to get involved in developing `terraform-aws-key-pair`, we would love to hear from you! Shoot us an [email](mailto:hello@cloudposse.com).
+If you are interested in being a contributor and want to get involved in developing `terraform-tls-ssh-key-pair`, we would love to hear from you! Shoot us an [email](mailto:hello@cloudposse.com).
 
 In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
@@ -92,7 +94,7 @@ See [LICENSE](LICENSE) for full details.
 
 ## About
 
-`terraform-aws-key-pair` is maintained and funded by [Cloud Posse, LLC][website].
+`terraform-tls-ssh-key-pair` is maintained and funded by [Cloud Posse, LLC][website].
 
 ![Cloud Posse](https://cloudposse.com/logo-300x69.png)
 
@@ -109,7 +111,7 @@ or [hire us][hire] to help build your next cloud platform.
   [hire]: https://cloudposse.com/contact/
 
 
-### Contributors
+## Contributors
 
 | [![Erik Osterman][erik_img]][erik_web]<br/>[Erik Osterman][erik_web] | [![Andriy Knysh][andriy_img]][andriy_web]<br/>[Andriy Knysh][andriy_web] |
 |-------------------------------------------------------|------------------------------------------------------------------|
