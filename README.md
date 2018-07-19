@@ -84,9 +84,9 @@ Available targets:
 
 Check out these related projects.
 
-- [/terraform-aws-acm-request-certificate](https://github.com/cloudposse/terraform-aws-acm-request-certificate) - Terraform module to request an ACM certificate for a domain name and create a CNAME record in the DNS zone to complete certificate validation
-- [terraform-aws-alb](https://github.com/cloudposse/terraform-aws-alb) - Terraform module to provision a standard ALB for HTTP/HTTP traffic
+- [terraform-aws-acm-request-certificate](https://github.com/cloudposse/terraform-aws-acm-request-certificate) - Terraform module to request an ACM certificate for a domain name and create a CNAME record in the DNS zone to complete certificate validation
 - [bastion](https://github.com/cloudposse/bastion) - 🔒Secure Bastion implemented as Docker Container running Alpine Linux with Google Authenticator & DUO MFA support
+- [terraform-aws-key-pai](https://github.com/cloudposse/terraform-aws-key-pair) - Terraform Module to Automatically Generate SSH Key Pairs (Public/Private Keys)
 
 
 
