@@ -1,0 +1,72 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: terraform-tls-ssh-key-pair
+
+# Logo for this project
+#logo: docs/logo.png
+
+# License of this project
+license: "APACHE2"
+
+# Canonical GitHub repo
+github_repo: cloudposse/terraform-tls-ssh-key-pair
+
+# Badges to display
+badges:
+  - name: "Build Status"
+    image: "https://travis-ci.org/cloudposse/terraform-tls-ssh-key-pair.svg?branch=master"
+    url: "https://travis-ci.org/cloudposse/terraform-tls-ssh-key-pair"
+  - name: "Latest Release"
+    image: "https://img.shields.io/github/release/cloudposse/terraform-tls-ssh-key-pair.svg"
+    url: "https://github.com/cloudposse/terraform-tls-ssh-key-pair/releases/latest"
+  - name: "Slack Community"
+    image: "https://slack.cloudposse.com/badge.svg"
+    url: "https://slack.cloudposse.com"
+
+related:
+  - name: "terraform-aws-acm-request-certificate"
+    description: "Terraform module to request an ACM certificate for a domain name and create a CNAME record in the DNS zone to complete certificate validation"
+    url: "https://github.com/cloudposse/terraform-aws-acm-request-certificate"
+  - name: "bastion"
+    description: "🔒Secure Bastion implemented as Docker Container running Alpine Linux with Google Authenticator & DUO MFA support"
+    url: "https://github.com/cloudposse/bastion"
+  - name: "terraform-aws-key-pai"
+    description: "Terraform Module to Automatically Generate SSH Key Pairs (Public/Private Keys)"
+    url: "https://github.com/cloudposse/terraform-aws-key-pair"
+
+# Short description of this project
+description: |-
+  Terraform module for generating an SSH public key file.
+
+# How to use this project
+usage: |-
+  ```hcl
+  module "ssh_key_pair" {
+    source                = "git::https://github.com/cloudposse/terraform-tls-ssh-key-pair.git?ref=master"
+    namespace             = "cp"
+    stage                 = "prod"
+    name                  = "app"
+    ssh_public_key_path   = "/secrets"
+    private_key_extension = ".pem"
+    public_key_extension  = ".pub"
+    chmod_command         = "chmod 600 %v"
+  }
+  ```
+
+include:
+  - "docs/targets.md"
+  - "docs/terraform.md"
+
+# Contributors to this project
+contributors:
+  - name: "Erik Osterman"
+    github: "osterman"
+  - name: "Andriy Knysh"
+    github: "aknysh"
+  - name: "AMyachev"
+    github: "AMyachev"
