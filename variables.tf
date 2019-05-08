@@ -42,6 +42,18 @@ variable "ssh_key_algorithm" {
   description = "SSH key algorithm"
 }
 
+variable "ssh_key_bits" {
+  type = "string"
+  default = "2048"
+  description = "SSH RSA key bits"
+}
+
+variable "ssh_key_curve" {
+  type = "string"
+  default = "P256"
+  description = "SSH ECDSA elliptic curve"
+}
+
 variable "private_key_extension" {
   type        = "string"
   default     = ""

@@ -4,6 +4,6 @@ output "key_name" {
 }
 
 output "public_key" {
-  value       = "${join("", tls_private_key.default.*.public_key_openssh)}"
+  value       = "${var.ssh_key_algorithm == "RSA" ? join("", tls_private_key.default_rsa.*.public_key_openssh) : join("", tls_private_key.default_ecdsa.*.public_key_openssh)}"
   description = "Contents of the generated public key"
 }

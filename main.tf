@@ -13,19 +13,27 @@ locals {
   private_key_filename = "${var.ssh_public_key_path}/${module.label.id}${var.private_key_extension}"
 }
 
-resource "tls_private_key" "default" {
+resource "tls_private_key" "default_rsa" {
+  count = "${var.ssh_key_algorithm == "RSA" ? 1 : 0}"
   algorithm = "${var.ssh_key_algorithm}"
+  rsa_bits = "${var.ssh_key_bits}"
+}
+
+resource "tls_private_key" "default_ecdsa" {
+  algorithm = "${var.ssh_key_algorithm}"
+  count = "${var.ssh_key_algorithm == "ECDSA" ? 1 : 0}"
+  ecdsa_curve = "${var.ssh_key_curve}"
 }
 
 resource "local_file" "public_key_openssh" {
-  depends_on = ["tls_private_key.default"]
-  content    = "${tls_private_key.default.public_key_openssh}"
+  depends_on = ["tls_private_key.default_rsa", "tls_private_key.default_ecdsa"]
+  content    = "${var.ssh_key_algorithm == "RSA" ? tls_private_key.default_rsa.public_key_openssh : tls_private_key.default_ecdsa.public_key_openssh}"
   filename   = "${local.public_key_filename}"
 }
 
 resource "local_file" "private_key_pem" {
-  depends_on = ["tls_private_key.default"]
-  content    = "${tls_private_key.default.private_key_pem}"
+  depends_on = ["tls_private_key.default_rsa", "tls_private_key.default_ecdsa"]
+  content    = "${var.ssh_key_algorithm == "RSA" ? tls_private_key.default_rsa.private_key_pem : tls_private_key.default_ecdsa.private_key_pem}"
   filename   = "${local.private_key_filename}"
 }
 
