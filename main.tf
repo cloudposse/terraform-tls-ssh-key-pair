@@ -14,14 +14,12 @@ locals {
 }
 
 resource "tls_private_key" "default_rsa" {
-  count = "${var.ssh_key_algorithm == "RSA" ? 1 : 0}"
   algorithm = "${var.ssh_key_algorithm}"
   rsa_bits = "${var.ssh_key_bits}"
 }
 
 resource "tls_private_key" "default_ecdsa" {
   algorithm = "${var.ssh_key_algorithm}"
-  count = "${var.ssh_key_algorithm == "ECDSA" ? 1 : 0}"
   ecdsa_curve = "${var.ssh_key_curve}"
 }
 
