@@ -11,6 +11,8 @@
 | private_key_extension | Private key extension | string | `` | no |
 | public_key_extension | Public key extension | string | `.pub` | no |
 | ssh_key_algorithm | SSH key algorithm | string | `RSA` | no |
+| ssh_key_bits | SSH RSA key bits | string | `2048` | no |
+| ssh_key_curve | SSH ECDSA elliptic curve | string | `P256` | no |
 | ssh_public_key_path | Path to SSH public key directory (e.g. `/secrets`) | string | - | yes |
 | stage | Stage (e.g. `prod`, `dev`, `staging`) | string | - | yes |
 | tags | Additional tags (e.g. map(`BusinessUnit`,`XYZ`) | map | `<map>` | no |
