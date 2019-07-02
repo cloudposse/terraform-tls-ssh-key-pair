@@ -18,9 +18,9 @@ github_repo: cloudposse/terraform-tls-ssh-key-pair
 
 # Badges to display
 badges:
-  - name: "Build Status"
-    image: "https://travis-ci.org/cloudposse/terraform-tls-ssh-key-pair.svg?branch=master"
-    url: "https://travis-ci.org/cloudposse/terraform-tls-ssh-key-pair"
+  - name: "Codefresh Build Status"
+    image: "https://g.codefresh.io/api/badges/pipeline/cloudposse/terraform-modules%2Fterraform-tls-ssh-key-pair?type=cf-1"
+    url: "https://g.codefresh.io/public/accounts/cloudposse/pipelines/5d1ba1ec95dc303d119861cd"
   - name: "Latest Release"
     image: "https://img.shields.io/github/release/cloudposse/terraform-tls-ssh-key-pair.svg"
     url: "https://github.com/cloudposse/terraform-tls-ssh-key-pair/releases/latest"
@@ -48,8 +48,8 @@ usage: |-
   ```hcl
   module "ssh_key_pair" {
     source                = "git::https://github.com/cloudposse/terraform-tls-ssh-key-pair.git?ref=master"
-    namespace             = "cp"
-    stage                 = "prod"
+    namespace             = "eg"
+    stage                 = "test"
     name                  = "app"
     ssh_public_key_path   = "/secrets"
     private_key_extension = ".pem"
