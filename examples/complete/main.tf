@@ -4,8 +4,6 @@ provider "aws" {
 
 module "ssh_key_pair" {
   source              = "../../"
-  namespace           = var.namespace
-  stage               = var.stage
-  name                = var.name
+  context             = module.this.context
   ssh_public_key_path = var.ssh_public_key_path
 }

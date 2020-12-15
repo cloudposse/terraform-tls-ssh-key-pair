@@ -1,5 +1,5 @@
 output "key_name" {
-  value       = module.label.id
+  value       = module.this.id
   description = "Name of SSH key"
 }
 
