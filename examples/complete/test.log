@@ -1,7 +1,0 @@
-
-Test: check if terraform code needs formatting
-File: lint.bats
----------------------------------
-main.tf
----------------------------------
-
