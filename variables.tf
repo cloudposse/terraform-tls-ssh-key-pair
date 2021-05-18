@@ -26,3 +26,9 @@ variable "chmod_command" {
   default     = "chmod 600 %v"
   description = "Template of the command executed on the private key file"
 }
+
+variable "private_key_output_enabled" {
+  type        = bool
+  default     = false
+  description = "Add the private key as a terraform output private_key"
+}

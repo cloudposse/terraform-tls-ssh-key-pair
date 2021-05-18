@@ -9,6 +9,7 @@ output "public_key" {
 }
 
 output "private_key" {
-  value       = tls_private_key.default.private_key_pem
+  value       = var.private_key_output_enabled ? tls_private_key.default.private_key_pem : null
   description = "Content of the generated private key"
+  sensitive   = true
 }
