@@ -1,4 +1,3 @@
----
 #
 # This is the canonical configuration for the `README.md`
 # Run `make readme` to rebuild the `README.md`
@@ -18,16 +17,17 @@ github_repo: cloudposse/terraform-tls-ssh-key-pair
 
 # Badges to display
 badges:
-  - name: "Codefresh Build Status"
-    image: "https://g.codefresh.io/api/badges/pipeline/cloudposse/terraform-modules%2Fterraform-tls-ssh-key-pair?type=cf-1"
-    url: "https://g.codefresh.io/public/accounts/cloudposse/pipelines/5d1ba1ec95dc303d119861cd"
-  - name: "Latest Release"
-    image: "https://img.shields.io/github/release/cloudposse/terraform-tls-ssh-key-pair.svg"
-    url: "https://github.com/cloudposse/terraform-tls-ssh-key-pair/releases/latest"
-  - name: "Slack Community"
-    image: "https://slack.cloudposse.com/badge.svg"
-    url: "https://slack.cloudposse.com"
+  - name: Latest Release
+    image: https://img.shields.io/github/release/cloudposse/terraform-tls-ssh-key-pair.svg?style=for-the-badge
+    url: https://github.com/cloudposse/terraform-tls-ssh-key-pair/releases/latest
+  - name: Last Updated
+    image: https://img.shields.io/github/last-commit/cloudposse/terraform-tls-ssh-key-pair.svg?style=for-the-badge
+    url: https://github.com/cloudposse/terraform-tls-ssh-key-pair/commits
+  - name: Slack Community
+    image: https://slack.cloudposse.com/for-the-badge.svg
+    url: https://slack.cloudposse.com
 
+# List any related terraform modules that this module may be used with or that this module depends on.
 related:
   - name: "terraform-aws-acm-request-certificate"
     description: "Terraform module to request an ACM certificate for a domain name and create a CNAME record in the DNS zone to complete certificate validation"
@@ -65,10 +65,4 @@ include:
   - "docs/terraform.md"
 
 # Contributors to this project
-contributors:
-  - name: "Erik Osterman"
-    github: "osterman"
-  - name: "Andriy Knysh"
-    github: "aknysh"
-  - name: "AMyachev"
-    github: "AMyachev"
+contributors: []
