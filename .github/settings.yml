@@ -1,0 +1,7 @@
+# Upstream changes from _extends are only recognized when modifications are made to this file in the default branch.
+_extends: .github
+repository:
+  name: terraform-tls-ssh-key-pair
+  description: Terraform module for generating an SSH public/private key file.
+  homepage: https://cloudposse.com/accelerate
+  topics: terraform, terraform-module, tls, ssh, openssh, key-pair, ssh-server, private-key, public-key, hcl2
